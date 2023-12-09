@@ -105,6 +105,7 @@ Asegúrese de tener instalados los siguientes elementos en su entorno de desarro
 
 ## Estructura del Proyecto
 
+```
 tu-proyecto/
 ├── src/
 │   ├── main/
@@ -152,6 +153,7 @@ tu-proyecto/
 │                           └── UserServiceImplTest.java
 ├── build.gradle
 └── README.md
+```
 
 
 ## Contribuyendo
