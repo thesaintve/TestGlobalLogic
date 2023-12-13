@@ -19,8 +19,8 @@ Asegúrese de tener instalados los siguientes elementos en su entorno de desarro
 ### Pasos de Instalación
 1. **Clonar el Repositorio:**
     ```bash
-    git clone https://github.com/tu-usuario/tu-proyecto.git
-    cd tu-proyecto
+    git clone git@github.com:thesaintve/TestGlobalLogic.git
+    cd TestGlobalLogic
     ```
 
 2. **Configurar la Base de Datos H2 (Opcional):**
