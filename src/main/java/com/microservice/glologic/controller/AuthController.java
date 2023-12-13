@@ -35,7 +35,7 @@ public class AuthController {
         try {
             Optional<String> jwtTokenOptional = extractTokenFromHeader(authorizationHeader);
             String jwtToken = jwtTokenOptional.orElseThrow(() -> new CustomException(MSG_IVALID_TOKEN, HttpStatus.BAD_REQUEST ));
-            if (!jwtUtil.validateToken(userParams.getName(), jwtToken)) throw new CustomException(MSG_IVALID_TOKEN, HttpStatus.BAD_REQUEST );
+            if (!jwtUtil.validateToken(userParams.getEmail(), jwtToken)) throw new CustomException(MSG_IVALID_TOKEN, HttpStatus.BAD_REQUEST );
 
             User u = userService.getUserByEmail(userParams.getEmail())
                     .orElseThrow(() -> new CustomException(MSG_NOT_RECORD_FOUND, HttpStatus.NOT_FOUND));

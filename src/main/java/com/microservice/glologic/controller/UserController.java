@@ -31,7 +31,7 @@ public class UserController {
         try {
             if (!bindingResult.hasErrors()) {
                 User uCreated = userService.createUser(signUpUserDto);
-                CreatedUserDto userResponse = new CreatedUserDto(uCreated.getId(), uCreated.getName(), uCreated.getEmail(), uCreated.getActive(), uCreated.getCreated(), uCreated.getLastLogin(), jwtUtil.generateToken(uCreated.getName()));
+                CreatedUserDto userResponse = new CreatedUserDto(uCreated.getId(), uCreated.getName(), uCreated.getEmail(), uCreated.getActive(), uCreated.getCreated(), uCreated.getLastLogin(), jwtUtil.generateToken(uCreated.getEmail()));
 
                 return ResponseEntity.ok(userResponse);
             }
